@@ -2,7 +2,7 @@ import { ref } from "vue"
 export const validar = ()=>{
     const contraseña = ref('')
     const reglas_usuario = [
-      (val) => (val && val.length > 6 ) || "Ingrese un nombre de al menos  6 caracteres",
+      (val) => (val && val.length > 2 ) || "Ingrese un nombre de al menos  6 caracteres",
               
     ]
     const reglas_correo = [
@@ -12,7 +12,7 @@ export const validar = ()=>{
     const reglas_contra = [
         (val) => {
           contraseña.value = val; // Almacena el valor de la contraseña
-          return (val && val.length >= 8) || "La contraseña debe tener al menos 8 caracteres"; // Verifica la longitud
+          return (val && val.length >= 2) || "La contraseña debe tener al menos 2 caracteres"; // Verifica la longitud
         },
         (val) => (val && /[A-Z]/.test(val)) || "Debe incluir al menos una letra mayúscula",
         (val) => (val && /[a-z]/.test(val)) || "Debe incluir al menos una letra minúscula",
@@ -21,7 +21,7 @@ export const validar = ()=>{
        
       ]
       const reglas_repetir_contra = [
-        (val) => (val && val.length >= 8) || "La contraseña debe tener al menos 8 caracteres",
+        (val) => (val && val.length >= 2) || "La contraseña debe tener al menos 2 caracteres",
         (val) => (val && /[A-Z]/.test(val)) || "Debe incluir al menos una letra mayúscula",
         (val) => (val && /[a-z]/.test(val)) || "Debe incluir al menos una letra minúscula",
         (val) => (val && /\d/.test(val)) || "Debe incluir al menos un número",

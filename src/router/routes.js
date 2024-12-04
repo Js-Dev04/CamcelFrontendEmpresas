@@ -5,7 +5,7 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Empresas.vue') }
+      { path: '', component: () => import('pages/EmpresaDetalles.vue') }
     ]
   },
   {
@@ -34,13 +34,8 @@ const routes = [
     children: [
       {
         path: "",
-        component: () => import("src/pages/Empresas.vue"),
-        name: "enterprises",
-      },
-      {
-        path: ":slug/",
         component: () => import("src/pages/EmpresaDetalles.vue"),
-        name: "enterprise-detail",
+        name: "enterprises",
       },
       {
         path: ":enterprise/operator/:pk/",

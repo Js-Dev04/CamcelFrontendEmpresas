@@ -12,8 +12,8 @@
     const alto = ref("65%")
     const  { reglas_correo, reglas_contra } = validar()
         const entradas = ref([
-            {nombre:"email",tipo:"mail", valor:"", icono:"mail",placeholder:"Correo", estado:true,reglas:reglas_correo,},
-            {nombre:"password",tipo:"password", valor:"", icono:"mdi-lock-outline",placeholder:"Contraseña", estado:true,reglas:reglas_contra}
+            {nombre:"email",tipo:"mail", valor:"", icono:"mail",placeholder:"Correo", estado:true,},
+            {nombre:"password",tipo:"password", valor:"", icono:"mdi-lock-outline",placeholder:"Contraseña", estado:true,}
         ])
    
    
